@@ -80,7 +80,7 @@ The PCA algorithm involves:
 ---
 
 ## Script Implementation <a name="script-implementation"></a>
-
+## face_detection_on_image:
 For the implementation of PCA, a Python script was developed. This script performs the following steps:
 
 1. **Data Preprocessing**: Handling missing values, scaling features if necessary.
@@ -90,6 +90,10 @@ For the implementation of PCA, a Python script was developed. This script perfor
 5. **Projecting Data**: Transforming the original data into the new subspace defined by the principal components.
 
 The script is efficient and scalable, suitable for large datasets and various applications requiring dimensionality reduction.
+
+## realtime_face_detection_and_tracking:
+
+This MATLAB script (`realtime_face_detection_and_tracking.m`) demonstrates real-time face detection and tracking using a webcam. It employs computer vision techniques to detect facial features, track them across frames, and visualize the detection process on a live video feed.
 
 ---
 

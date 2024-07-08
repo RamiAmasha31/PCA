@@ -1,100 +1,50 @@
-# Final Project: PCA - Principal Component Analysis
+# Project Overview: Face Recognition and Real-time Face Detection
 
-## Rami Amasha 322241373 Department of Mathematics
+## Introduction
 
-## Components
-
-1. [Introduction](#introduction)
-   - [What is PCA?](#what-is-pca)
-   - [PCA Applications](#pca-applications)
-   - [Advantages and Disadvantages of PCA](#advantages-and-disadvantages-of-pca)
-   - [Assumptions and Limitations of PCA](#assumptions-and-limitations-of-pca)
-   
-2. [Mathematics behind PCA](#mathematics-behind-pca)
-   - [Modeling Data](#modeling-data)
-   - [Statistical View of PCA](#statistical-view-of-pca)
-   - [Geometric View of PCA](#geometric-view-of-pca)
-   
-3. [PCA Algorithm](#pca-algorithm)
-
-4. [Script Implementation](#script-implementation)
-
+This project explores two scripts implemented in MATLAB, focusing on face recognition using Principal Component Analysis (PCA) and real-time face detection and tracking. These scripts leverage computer vision techniques to perform specific tasks related to facial image processing.
 
 ---
 
-## Introduction <a name="introduction"></a>
+## Face Recognition using PCA
 
-### What is PCA? <a name="what-is-pca"></a>
+### Description
 
-Principal Component Analysis (PCA) is a statistical technique used for compression and extracting useful information from multivariate data sets. Its purpose is to reduce the dimensionality of a dataset by finding a new set of variables (uncorrelated) that are smaller than the original set of variables (correlated), with minimal loss of information.
+The `face_recognition_using_pca.m` script demonstrates the application of Principal Component Analysis (PCA) for face recognition:
 
-### PCA Applications <a name="pca-applications"></a>
+- **Data Loading**: Loads a database of face images.
+- **Random Image Selection**: Randomly selects an image from the database for recognition.
+- **Preprocessing**: Computes the mean of all images and subtracts it from the dataset.
+- **PCA Computation**: Calculates eigenvectors and eigenvalues from the covariance matrix of the adjusted dataset.
+- **Signature Generation**: Projects each image onto the eigenvectors to generate a unique signature.
+- **Recognition Process**: Compares the signature of the selected image with others in the dataset to identify and display the closest match.
 
-PCA finds applications in:
-- Visualizing multidimensional data
-- Compressing information efficiently
-- Simplifying complex business decisions
+### Functionality
 
-### Advantages and Disadvantages of PCA <a name="advantages-and-disadvantages-of-pca"></a>
-
-#### Advantages:
-- Easy to compute
-- Speeds up machine learning algorithms
-- Counteracts issues of high-dimensional data
-
-#### Disadvantages:
-- Low interpretability of principal components
-- Trade-off between information loss and dimensionality reduction
-
-### Assumptions and Limitations of PCA <a name="assumptions-and-limitations-of-pca"></a>
-
-- Assumes correlation between features
-- Sensitive to feature scaling
-- Assumes linear relationships between features
+This script showcases how PCA can be used to recognize faces based on their signatures, demonstrating its application in pattern recognition and image processing tasks.
 
 ---
 
-## Mathematics behind PCA <a name="mathematics-behind-pca"></a>
+## Real-time Face Detection and Tracking
 
-### Modeling Data <a name="modeling-data"></a>
+### Description
 
-There are two main approaches to modeling data: statistical models and geometric models.
+The `realtime_face_detection_and_tracking.m` script enables real-time face detection and tracking using a webcam:
 
-### Statistical View of PCA <a name="statistical-view-of-pca"></a>
+- **Webcam Initialization**: Initializes the webcam and sets its resolution.
+- **Frame Processing**: Reads frames from the webcam and converts them to grayscale.
+- **Face Detection**: Utilizes a Cascade Object Detector to detect faces in each frame.
+- **Face Tracking**: Tracks detected faces across consecutive frames using a Point Tracker.
+- **Visualization**: Displays the live video feed with detected faces highlighted by bounding polygons and markers.
+- **Continuous Operation**: Continues detecting and tracking faces until a specified number of frames or until the script is terminated.
 
-PCA aims to maximize the variance of projections onto lower-dimensional subspaces defined by eigenvectors of the covariance matrix.
+### Functionality
 
-### Geometric View of PCA <a name="geometric-view-of-pca"></a>
-
-PCA seeks an affine subspace that best fits a set of data points, optimizing the projection of points onto this subspace to minimize error.
-
----
-
-## PCA Algorithm <a name="pca-algorithm"></a>
-
-The PCA algorithm involves:
-- Computing the covariance matrix of the data
-- Finding its eigenvectors and eigenvalues
-- Selecting the top eigenvectors as principal components
+This script demonstrates the real-time capabilities of MATLAB in processing live video streams for face detection and tracking. It showcases the integration of computer vision algorithms to perform interactive and dynamic facial recognition tasks.
 
 ---
 
-## Script Implementation <a name="script-implementation"></a>
-## face_detection_on_image:
-For the implementation of PCA, a Python script was developed. This script performs the following steps:
+## Conclusion
 
-1. **Data Preprocessing**: Handling missing values, scaling features if necessary.
-2. **Computing Covariance Matrix**: Calculating the covariance matrix from the preprocessed data.
-3. **Eigenvalue Decomposition**: Using NumPy's linear algebra module to compute eigenvectors and eigenvalues of the covariance matrix.
-4. **Selecting Principal Components**: Sorting and selecting the top eigenvalues and corresponding eigenvectors to form the principal components.
-5. **Projecting Data**: Transforming the original data into the new subspace defined by the principal components.
-
-The script is efficient and scalable, suitable for large datasets and various applications requiring dimensionality reduction.
-
-## realtime_face_detection_and_tracking:
-
-This MATLAB script (`realtime_face_detection_and_tracking.m`) demonstrates real-time face detection and tracking using a webcam. It employs computer vision techniques to detect facial features, track them across frames, and visualize the detection process on a live video feed.
-
----
-
+These scripts illustrate practical applications of PCA and real-time face detection using MATLAB. They serve as foundational tools for developing more advanced applications in image processing, computer vision, and pattern recognition.
 

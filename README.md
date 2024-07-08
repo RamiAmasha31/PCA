@@ -19,7 +19,6 @@
 
 4. [Script Implementation](#script-implementation)
 
-5. [References](#references)
 
 ---
 
@@ -94,7 +93,4 @@ The script is efficient and scalable, suitable for large datasets and various ap
 
 ---
 
-## References <a name="references"></a>
-
-- Insert your references here
 
